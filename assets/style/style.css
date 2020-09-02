@@ -1,0 +1,192 @@
+@keyframes animate-top{
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(100%);}
+}
+@keyframes animate-left{
+    0%{transform: translateY(100%);}
+    100%{transform: translateY(-100%);}
+}
+@keyframes animate-right{
+    0%{transform: translateY(-100%);}
+    100%{transform: translateY(100%);}
+}
+@keyframes animate-bottom{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.nav{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav .nav-container{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav .nav-container .logo-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .nav-container .logo-container img{
+    width: 70px;
+}
+
+.nav .nav-container .logo-container p{
+    margin-left: 20px;
+}
+
+.nav .nav-container .logo-container p span{
+    font-size: 10px;
+}
+
+.nav .nav-container .navbar{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+    transition: opacity 1s, transform 1s;
+}
+
+.slide-enter,
+.slide-leave-to{
+    opacity: 0;
+    transform: translateX(-30%);
+}
+
+.home{
+    width: 100%;
+    margin: 0 auto;
+    background: #f9f9f9;
+    font-size: 24px;
+}
+
+.parallax{
+    background: url('../img/bg1.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+}
+
+.parallax .box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax .box p{
+    font-size: 50px;
+    color: white;
+    letter-spacing: 1rem;
+}
+
+.parallax .box a{
+    background-color: black;
+    color: white; 
+}
+
+/* Snake hover */
+.parallax .box a span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background:linear-gradient(to right, black, white);
+    animation: animate-top 2s linear infinite;
+}
+.parallax .box a span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background:linear-gradient(to bottom, black, white);
+    animation: animate-right 2s linear infinite;
+    animation-delay: 1s;
+}
+.parallax .box a span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background:linear-gradient(to left, black, white);
+    animation: animate-bottom 2s linear infinite;
+}
+.parallax .box a span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background:linear-gradient(to top, black, white);
+    animation: animate-left 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* Finsh Snake Hover */
+.first-row{
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.first-row img{
+    width: 50%;
+    height: 50%;
+}
+
+#map{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/* CONTACT */
+.contact{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .container{
+    border: 1px solid red;
+    width: 50%;
+    height: auto;
+}
